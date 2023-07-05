@@ -1,4 +1,4 @@
-import { DECREMENT, INCREMENT, RESET } from "./CounterTypes";
+import { DECREMENT, INCREMENT, INCREMENTBY5, RESET } from "./CounterTypes";
 export const increment = () => {
   //action creater , a function that returns an action
   return {
@@ -14,5 +14,10 @@ export const decrement = () => {
 export const reset = () => {
   return {
     type: RESET,
+  };
+};
+export const incrementby5 = () => {
+  return {
+    type: INCREMENTBY5,
   };
 };
