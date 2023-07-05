@@ -10,11 +10,11 @@ export const counterReducer = (state = initialstate, action) => {
         ...state,
         count: state.count + action.payload,
       };
-      case DECREMENT:
-        return {
-          ...state,
-          count: state.count - action.payload,
-        };
+    case DECREMENT:
+      return {
+        ...state,
+        count: state.count - action.payload,
+      };
     default:
       return state;
   }

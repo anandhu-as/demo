@@ -3,12 +3,12 @@ import { DECREMENT, INCREMENT } from "./CounterTypes";
 export const increment = (number) => {
   return {
     type: INCREMENT,
-    payload:number
+    payload: number,
   };
 };
 export const decrement = (number) => {
   return {
     type: DECREMENT,
-    payload:number
+    payload: number,
   };
 };
