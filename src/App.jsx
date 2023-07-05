@@ -1,13 +1,14 @@
 import React from "react";
-import Counter from "./Components/Counter";
-import Form from "./Components/Form";
-import Show from "./Components/Show";
+import { useDispatch, useSelector } from "react-redux";
+import { increment } from "./features/CounterSlice";
+
 const App = () => {
+  const { count } = useSelector((state) => state.counter);
+  const dispatch = useDispatch();
   return (
     <div>
-      <Counter />
-      <Form />
-      <Show/>
+      <h1>{count}</h1>
+      <button onClick={() => dispatch(increment())}>increment</button>
     </div>
   );
 };
